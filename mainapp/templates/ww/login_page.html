@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block all %}
+<form method="POST">
+    <div class="container text-center my-5">
+        <a href="base">
+            <img src={% static "images/WinterWise.svg" %} >
+        </a>
+    </div>
+    <div class="my-5 text-center">
+        <input type="text" name="username" class="text-white" placeholder="Логин" style="border-radius: 10px;">
+    </div>
+    <div class="my-3 text-center">
+        <input type="password" name="pswd1" id="password" placeholder="Пароль" class="text-white" style="border-radius: 10px;">
+    </div>
+    <!-- <p class="my-3 text-center fontmonst text-white"> -->
+        <!-- Войти через: -->
+    <!-- </p> -->
+    <!-- <div class=" text-center"> -->
+        <!-- <img src="images/sber.svg"> -->
+        <!-- <img src="images/gosuslugi.svg" class="ms-5"> -->
+    <!-- </div> -->
+    <div class="my-2 text-center p-3">
+        <input type="submit" class="btn fontmonst text-white btn-lg" style="background-color: #395383;">
+    </div>
+    <div class="my-3 text-center">
+        <a href="reg" class="btn fontmonst btn-lg" style="color:#313131">Регистрироваться</a>
+      </div>
+      {% csrf_token %}
+    </form>
+{% endblock all %}

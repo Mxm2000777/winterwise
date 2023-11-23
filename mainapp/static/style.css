@@ -1,0 +1,80 @@
+@font-face {
+	font-family: 'monst'; /*a name to be used later*/
+    src: url("fonts/monsterrat.ttf"); /*URL to font*/
+}
+.fontmonst{
+    font-family: monst;
+}
+.square {
+    height: 50px;
+    width: 50px;
+    background-color: #2E609A;
+    }
+.rounded {
+    border-radius: 50em;
+    
+}
+input[type="search"] {
+    max-width: 300px; /* здесь вы можете указать ширину окна поиска */
+}
+
+.low{
+    color: #FF2E00;
+}
+.norm{
+    color: #FF7A00;
+}
+.mnogo{
+    color: #00FF1A;
+}
+.phone{
+    border-radius: 50px 50px 0px 0px;
+    background-color: #0D1F42;
+}
+input[type="text"] {
+    font-family: monst;
+    text-decoration: none;
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    background-color : #313131; 
+}
+input[type="password"] {
+    font-family: monst;
+    text-decoration: none;
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    color: white;
+    background-color : #313131; 
+}
+.bgimg{
+    background: url(images/slide.svg);
+}
+.flex-1{
+    flex: 1;
+}
+
+form {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+}
+.notif{
+    flex-direction: column;
+}
+input[type="search"]::placeholder {
+    color: #313131;
+  }
+.rounded-img{
+    width: 60%;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+.eye{
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+

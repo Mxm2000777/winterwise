@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block all %}
+<body style="background: #4786FF;">
+<form method="POST" enctype='multipart/form-data'>
+        <a href="">
+            <img src={% static "images/strelka.svg" %} alt="">
+        </a>
+    <div class="container mx-auto text-center my-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <div class="mx-auto text-center">
+                    <div class="">
+                        <div class="fontmonst">Что нового?</div>
+                        <textarea class="fontmonst" maxlength=100 name="desk" id="exampleFormControlTextarea1" rows="3" style="border-radius: 10px;"></textarea>
+                    </div>
+                    <div class="my-3 ">
+                        <label for="formFileSm" class="form-label fontmonst">Выберите файлы</label>
+                        <input name="file" class="fontmonst form-control form-control-sm" id="formFileSm" type="file">
+                    </div>
+                    <div class="my-2 text-center">
+
+                        <input type="submit" class="btn fontmonst text-white btn-lg" style="background-color: #395383;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% csrf_token %}
+</form>
+</body>
+{% endblock all %}

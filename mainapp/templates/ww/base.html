@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WinterWise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous"/>
+    <link href={% static "style.css" %} rel="stylesheet" type="text/css"/>
+</head>
+<body class="bgimg">
+  {% block all %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: #292929;">
+        <div class="container">
+          <a class="navbar-brand p-0" href="/">
+            <img src={% static "images/WinterWiseWhite.svg" %} alt="Logo" width="200"/>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Stores</a>
+              </li>
+    
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container text-center my-5">
+          <div class="d-flex">
+            <div class="col-lg-6 col-md-8 mx-auto d-flex" style="justify-content: space-between;">
+                <div class="square rounded">
+                    <img class ="my-3"src={% static "images/uimenu/Profile.svg" %} alt="Profile" width="25"/>
+                </div>
+                <div class="form-group">
+                    <input type="search" class="form-control" placeholder="Поиск">
+                </div>
+                <div class="square rounded">
+                    <img class ="my-3"src={% static "images/bell.svg" %} alt="Profile" width="25"/>
+                </div>
+                </div>
+            </div>
+            <div class="card my-5 px-3" width="50" style="border-radius: 20px;background-color: #2E609A; border: none;">
+                <div class="d-flex mx-auto">
+                    <img src={% static "images/tomato.svg" %} width="75" class="">
+                    <p class="p-5 fontmonst text-white">Помидоры</p>
+                    <p class="low p-5 fontmonst">6 шт (2кг)</p>
+                </div>
+                <div class="d-flex mx-auto">
+                    <img src={% static "images/steak.svg" %} width="75" class="">
+                    <p class="p-5 fontmonst text-white">Мясо</p>
+                    <p class="norm p-5 fontmonst">10 шт (8кг)</p>
+                </div>
+                <div class="d-flex mx-auto">
+                    <img src={% static "images/potato.svg" %} width="75" class="">
+                    <p class="p-5 fontmonst text-white">Картошка</p>
+                    <p class="mnogo p-5 p">20 шт (4кг)</p>
+                </div>
+                <div class="d-flex mx-auto">
+                    <img src={% static "images/milk.svg" %} width="75" class="">
+                    <p class="p-5 fontmonst text-white">Молоко</p>
+                    <p class="mnogo p-5 fontmonst">15 шт (15,5л)</p>
+                </div>
+
+            </div>
+            <div class="d-flex gap-3" style="justify-content: space-between;">
+                <div class="card my-3 mx-auto pt-5 ps-5 pe-5 flex-1" style="border-radius: 20px; background-color: #2E609A; border: none;">
+                    <p class="fontmonst text-white">Доставка</p>
+                    <img src={% static "images/BOY.svg" %} width="100">
+                </div>
+                <div class="card my-3 mx-auto p-5 flex-1" style="border-radius: 20px; background-color: #2E609A; border: none;">
+                    <p class="fontmonst text-white">Интерактивная карта</p>
+                    <img src={% static "images/map.svg" %} width="100" class="ms-4">
+                </div>
+
+            </div>
+            <div class="card my-5 mx-auto " style="border-radius: 20px; background-color: #2E609A; border: none;">
+                <p class="fontmonst text-white">Инструкции по употреблению лекарств</p>
+                <img src={% static "images/pills.svg" %} width="100" class="ms-auto">
+            </div>
+          </div>
+      </div>
+      {% endblock all %}
+</body>
+</html>
